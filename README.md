@@ -2,7 +2,7 @@
 
 SmartPic 是一款 Alfred workflow，可以方便大家上传图片到云上，并获取图片链接，可用于 Markdown 写文章时添加图片或其他用途。
 
-> 注：SmartPic 基于 Python 2.7，请确保已安装 Python，并具备 Python 基础库，如 request。
+> 注：SmartPic 基于 Python 2.7，请确保已安装 Python。
 
 ## 安装
 
@@ -44,10 +44,10 @@ SmartPic 其实是将图片上传至腾讯云存储桶，所以你需要自行�
 
 此命令包含以下四个命令：
 
-- config：配置存储桶参数
-- list：查看已上传图片列表，移动到指定项：Cmd + Y 可查看图片；Enter 可复制图片链接
-- uploadPic：上传图片：搜索出图片，Enter 后即可上传，上传完成会自动复制链接到剪切板
-- help：查看帮助文档
+- ```config```：配置存储桶参数
+- ```list```：查看已上传图片列表，移动到指定项：Cmd + Y 可查看图片；Enter 可复制图片链接
+- ```uploadPic```：上传图片：搜索出图片，Enter 后即可上传，上传完成会自动复制链接到剪切板
+- ```help```：查看帮助文档
 
 ### SmartPicUploadPic 命令
 

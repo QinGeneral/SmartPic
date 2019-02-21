@@ -1,0 +1,7 @@
+{
+    "secret_id": "xxxxxx",
+    "secret_key": "xxxxxx",
+    "region": "xxxxxx",
+    "bucket": "xxxxxx",
+    "blog_prefix": "xxxxxx"
+}

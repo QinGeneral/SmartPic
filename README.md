@@ -18,26 +18,30 @@ SmartPic 其实是将图片上传至腾讯云存储桶，所以你需要自行�
 2. 创建完成后的界面如下图：
 ![创建后界面](https://blog-pic-1251295613.cos.ap-guangzhou.myqcloud.com/1550648375.032.png)
 
-3. 点击左侧的密钥管理，可以找到配置参数中的 secret_id、secret_key 两项
-![查看密钥](https://blog-pic-1251295613.cos.ap-guangzhou.myqcloud.com/1550648364.593.png)
+3. 点击左侧的[密钥管理](https://console.qcloud.com/cam/capi)，可以找到配置参数中的 secret_id、secret_key、以及 APPID
+![查看密钥](./.github/cloud-api-key.png)
 
-4. 点击要使用的存储桶，进入下图界面。各个参数的对应值已在图中标出，包含 bucket、region、blog_prefix 三项。
-![存储桶参数](https://blog-pic-1251295613.cos.ap-guangzhou.myqcloud.com/4.png)
+4. 点击[存储桶列表](https://console.qcloud.com/cos/bucket)，进入要使用的存储桶，在基础配置选项卡中找到"空间名称"，bucket 参数格式为 `空间名称-APPID`，例如 `example-125226*****`
 
-5. 呼出 Alfred，输入 SmartPic 命令，按下 Enter 进入菜单界面，并选择 ```config``` 菜单（如下图），在打开的文件中以 json 方式配置上述步骤中找到的 secret_id、secret_key、bucket、region、blog_prefix 五项参数，替换 ```******``` 部分即可，以下述代码为例。
+5. 查看所属地区，例如 `北京（bj）`，在[文档中心---地域和访问域名](https://cloud.tencent.com/document/product/436/6224)中查看对应的 region 值，北京对应的是 `ap-beijing`
+
+6. 在存储桶---域名管理中，可以看到**默认访问域名**，有适用于 `JSON API` 和 `XML API` 两个，这里使用**适用于 XML API** 的域名，才可以正确预览图片。例如 `example-125226*****.cos.ap-beijing.myqcloud.com`，对应 blog_prefix
+
+7. 呼出 Alfred，输入 SmartPic 命令，按下 Enter 进入菜单界面，并选择 ```config``` 菜单（如下图），在打开的文件中以 json 方式配置上述步骤中找到的 secret_id、secret_key、bucket、region、blog_prefix 五项参数，替换指定部分即可，以下述代码为例。
 ![配置 SmartPic](https://blog-pic-1251295613.cos.ap-guangzhou.myqcloud.com/1550651675.75SmartPic.png)
     ```config.txt```文件的配置格式
 
     ```json
     {
-        "secret_id": "******",
-        "secret_key": "******",
-        "region": "ap-guangzhou(只取英文)",
-        "bucket": "******",
-        "blog_prefix": "******"
+        "secret_id": "${your_secret_id}",
+        "secret_key": "${your_secret_key}",
+        "region": "ap-guangzhou",
+        "bucket": "${your_bucket_name-APPID}",
+        "blog_prefix": "${your_default_domain}"
     }
     ```
 
+8. 具体配置参考 [Python SDK 使用文档](https://cloud.tencent.com/document/product/436/12269)
 ## 使用
 
 ### SmartPic 命令

@@ -23,7 +23,7 @@ def main():
     except ValueError:
         sys.stdout.write("no")
 
-    if config.has_key('secret_id') & config.has_key('secret_key') & config.has_key('region') & config.has_key('bucket') & config.has_key('blog_prefix') & (config['secret_id'] != 'xxxxxx') & (config['secret_key'] != 'xxxxxx') & (config['region'] != 'xxxxxx') & (config['bucket'] != 'xxxxxx') & (config['blog_prefix'] != 'xxxxxx'):
+    if ('secret_id' in config) & ('secret_key' in config) & ('region' in config) & ('bucket' in config) & ('blog_prefix' in config) & (config['secret_id'] != 'xxxxxx') & (config['secret_key'] != 'xxxxxx') & (config['region'] != 'xxxxxx') & (config['bucket'] != 'xxxxxx') & (config['blog_prefix'] != 'xxxxxx'):
         sys.stdout.write("yes")
     else:
         sys.stdout.write("no")

@@ -2,11 +2,11 @@
 
 SmartPic 是一款 Alfred workflow，可以方便大家上传图片到云上，并获取图片链接，可用于 Markdown 写文章时添加图片或其他用途。
 
-> 注：SmartPic 基于 Python 2.7，请确保已安装 Python。
+> 注：SmartPic 基于 Python 3，请确保已安装 Python。
 
 ## 安装
 
-下载 SmartPic.alfredworkflow 文件后，双击即可。当然，前提是已安装 Alfred（请自行安装）。
+下载 SmartPic.alfredworkflow 文件后，双击即可。当然，前提是已安装 Alfred。
 
 ## 配置
 

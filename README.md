@@ -52,3 +52,7 @@ SmartPic 其实是将图片上传至腾讯云存储桶，所以你需要自行�
 ### SmartPicUploadPic 命令
 
 上传图片：搜索出图片，Enter 后即可上传，上传完成会自动复制链接到剪切板。
+
+## 致谢
+
+- SmartPic 用到的图片源于 [iconfont.cn](https://iconfont.cn/)
